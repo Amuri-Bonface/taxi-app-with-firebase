@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+    <android.support.v7.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:cardElevation="4dp"
+
+        app:cardCornerRadius="3dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:text="Add Pickup-Chukuliwa" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/location_pointer1" />
+
+    <EditText
+        android:id="@+id/pickUp_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:textSize="16sp" />
+
+
+</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginStart="50dp"
+                android:text="Add Destination-Kwenda"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/location_pointer2" />
+
+
+                <EditText
+                    android:id="@+id/destination_edit"
+                    android:layout_width="184dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:editable="true"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:entries="@array/payments"
+                    android:textAlignment="textStart"
+                    android:textColor="#000" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/estimateButton"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:text="Estimate Price" />
+
+            </LinearLayout>
+
+
+        </LinearLayout></android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myCard"
+        app:cardUseCompatPadding="true"
+        android:visibility="invisible"
+        app:cardElevation="4dp"
+
+        app:cardCornerRadius="3dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pickUpview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="monospace"
+            android:text="Pickup-chukuliwa:......"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/destinationview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="monospace"
+            android:text="Destination-Kwenda:......"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/basePriceView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="monospace"
+            android:text="Base Price:Ksh.250"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:id="@+id/perKmView"
+            android:fontFamily="monospace"
+            android:text="Amount per Km:......"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/distanceView"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="monospace"
+            android:text="Distance:......"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/totalView"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="monospace"
+            android:text="Total:......"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:id="@+id/durationView"
+            android:fontFamily="monospace"
+            android:text="Duration:......"
+            android:textSize="14sp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="182dp"
+        android:id="@+id/requestButton"
+        android:layout_height="wrap_content"
+        android:text="Request" />
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/exitb"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+        </LinearLayout></android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

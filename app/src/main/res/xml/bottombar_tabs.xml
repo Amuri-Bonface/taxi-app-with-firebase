@@ -1,0 +1,14 @@
+<tabs>
+    <tab
+        id="@+id/tab_favorites"
+        icon="@drawable/ic_favorites"
+        title="Available Taxi" />
+    <tab
+        id="@+id/tab_nearby"
+        icon="@drawable/ic_nearby"
+        title="Nearby" />
+    <tab
+        id="@+id/tab_friends"
+        icon="@drawable/ic_friends"
+        title="Friends" />
+</tabs>
