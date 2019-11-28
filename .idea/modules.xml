@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Taxityz.iml" filepath="$PROJECT_DIR$/Taxityz.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taxi-app-with-firebase.iml" filepath="$PROJECT_DIR$/taxi-app-with-firebase.iml" />
     </modules>
   </component>
 </project>
