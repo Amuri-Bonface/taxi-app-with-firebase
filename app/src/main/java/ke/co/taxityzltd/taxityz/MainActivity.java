@@ -14,16 +14,18 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,8 +50,8 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -66,6 +68,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.intentfilter.androidpermissions.PermissionManager;
+import com.rtchagas.pingplacepicker.PingPlacePicker;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -288,7 +291,7 @@ requestButton.setOnClickListener(new View.OnClickListener() {
         pickPoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
+              /*  try {
 
                     AutocompleteFilter autocompleteFilter = new AutocompleteFilter.Builder()
                             .setTypeFilter(Place.TYPE_COUNTRY)
@@ -303,7 +306,23 @@ requestButton.setOnClickListener(new View.OnClickListener() {
                 } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
 
                 }
+*/
 
+                PingPlacePicker.IntentBuilder builder = new PingPlacePicker.IntentBuilder();
+                builder.setAndroidApiKey("YOUR_ANDROID_API_KEY")
+                        .setMapsApiKey("YOUR_MAPS_API_KEY");
+
+                // If you want to set a initial location rather then the current device location.
+                // NOTE: enable_nearby_search MUST be true.
+                // builder.setLatLng(new LatLng(37.4219999, -122.0862462))
+
+                try {
+                    Intent placeIntent = builder.build(MainActivity.this);
+                    startActivityForResult(placeIntent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
+                }
+                catch (Exception ex) {
+                    // Google Play services is not available...
+                }
 
             }
         });
@@ -315,7 +334,7 @@ requestButton.setOnClickListener(new View.OnClickListener() {
         destination.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
+               /* try {
                     estimateButton.setEnabled(true);
                     AutocompleteFilter autocompleteFilter = new AutocompleteFilter.Builder()
                             .setTypeFilter(Place.TYPE_COUNTRY)
@@ -332,7 +351,25 @@ requestButton.setOnClickListener(new View.OnClickListener() {
 
                 }
 
+*/
 
+                PingPlacePicker.IntentBuilder builder = new PingPlacePicker.IntentBuilder();
+                builder.setAndroidApiKey("YOUR_ANDROID_API_KEY")
+                        .setMapsApiKey("YOUR_MAPS_API_KEY")
+                ;
+
+
+                // If you want to set a initial location rather then the current device location.
+                // NOTE: enable_nearby_search MUST be true.
+                // builder.setLatLng(new LatLng(37.4219999, -122.0862462))
+
+                try {
+                    Intent placeIntent = builder.build(MainActivity.this);
+                    startActivityForResult(placeIntent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
+                }
+                catch (Exception ex) {
+                    // Google Play services is not available...
+                }
             }
         });
 

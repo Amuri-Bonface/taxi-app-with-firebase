@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "539156085179",
+    "firebase_url": "https://storied-shelter-116920.firebaseio.com",
+    "project_id": "storied-shelter-116920",
+    "storage_bucket": "storied-shelter-116920.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539156085179:android:c9aae7a23e171dcc56ac9e",
+        "android_client_info": {
+          "package_name": "ke.co.taxityzltd.taxityz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539156085179-hcmsbdjnt9k3ldr611t53sbt8lvt743e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ke.co.taxityzltd.taxityz",
+            "certificate_hash": "8e61267c1ba8a0de03e84396162337384cb0c9ca"
+          }
+        },
+        {
+          "client_id": "539156085179-f40sn833mjeliemprc59qalonm20eu90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnmugxRrMwHA0jYIOb90-EmVxUDxFKsQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539156085179-f40sn833mjeliemprc59qalonm20eu90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

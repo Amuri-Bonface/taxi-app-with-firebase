@@ -14,12 +14,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -447,7 +447,7 @@ public class MainActivity2 extends AppCompatActivity implements OnMapReadyCallba
 
                                         AlertDialog.Builder builder;
 
-                                        builder = new android.support.v7.app.AlertDialog.Builder(MainActivity2.this);
+                                        builder = new androidx.appcompat.app.AlertDialog.Builder(MainActivity2.this);
 
                                         builder.setTitle("Total Amount")
                                                 .setMessage("Distance "+distance+"\n"+" Time:" + time + " \n")
