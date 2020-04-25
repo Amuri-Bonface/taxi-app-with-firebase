@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Taxityz</string>
+    <string name="app_name">OBO Riders</string>
     <string name="title_home">Pick Up</string>
     <string name="title_dashboard">Drop Off</string>
     <string name="title_notifications">Notifications</string>
